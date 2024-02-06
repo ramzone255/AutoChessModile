@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoChess.SportsmansPage"
+             Title="SportsmansPage">
+    <StackLayout>
+        <Picker Title="Категория" x:Name="GroupPicker" SelectedItem="{Binding Category}">
+            <Picker.Items>
+                <x:String>Гроссмейстер</x:String>
+                <x:String>Мейстер</x:String>
+                <x:String>Мастер спорта</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker Title="Место" x:Name="GroupPicker2" SelectedItem="{Binding Place}">
+            <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label Text="Имя" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="Дата рождения" />
+        <Entry Text="{Binding Birth}" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Сохранить" Clicked="SaveStudent" />
+            <Button Text="Удалить" Clicked="DeleteStudent" />
+            <Button Text="Отмена" Clicked="Cancel" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
